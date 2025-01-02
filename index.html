@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Juego Inicial</title>
+    <script src="https://kit.fontawesome.com/ba4df52424.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="scoreboard">
+        <div id="user-score">Usuario: 0</div>
+        <div id="machine-score">Máquina: 0</div>
+    </div>
+
+    <div id="initial-screen" class="container">
+        <a href="#" class="button" onclick="showGameScreen()">Nuevo Juego</a>
+        <a href="#" class="button" onclick="showRules()">Cómo se juega</a>
+    </div>
+
+    <div id="game-screen" class="container hidden">
+        <h2>Selecciona 2 opciones:</h2>
+        <div class="choices">
+            <div class="choice" onclick="selectOption('Piedra')"><i class="fas fa-hand-rock"></i></div>
+            <div class="choice" onclick="selectOption('Papel')"><i class="fas fa-hand-paper"></i></div>
+            <div class="choice" onclick="selectOption('Tijera')"><i class="fas fa-hand-scissors"></i></div>
+        </div>
+    </div>
+
+    <div id="result-screen" class="container hidden result-section">
+        <h2>Resultados:</h2>
+        <div id="machine-row" class="result-row"></div>
+        <div id="user-row" class="result-row"></div>
+    </div>
+
+    <dialog id="rules-dialog">
+        <p>¡Hola! 😊 Aquí te explico cómo jugar:
+        <ul>
+            <li>Elige dos opciones entre "Piedra", "Papel" y "Tijera".</li>
+            <li>Luego selecciona una de esas dos opciones para enfrentarte a la máquina.</li>
+            <li>Recuerda las reglas: Piedra vence a Tijera, Tijera vence a Papel y Papel vence a Piedra.</li>
+            <li>Si ganas, acumulas puntos, pero si pierdes, la máquina acumula puntos.</li>
+            <li>El juego termina cuando alguno alcance 5 derrotas. ¡A por la victoria!</li>
+        </ul>
+        </p>
+        <button onclick="closeRules()">¡Entendido!</button>
+    </dialog>
+
+    <dialog id="result-dialog">
+    </dialog>
+
+    <script>
+       
+    </script>
+</body>
+</html>
